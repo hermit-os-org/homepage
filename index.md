@@ -2,17 +2,24 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+[Hermit](http://hermit-os.org) is a [unikernel](http://unikernel.org) targeting a scalable and predictable runtime for high-performance and cloud computing.
+Unikernel means, you bundle your application directly with the kernel library, so that it can run without any installed operating system.
+This reduces overhead, therefore, interesting applications include virtual machines and high-performance computing.
 
-[Link to another page](./another-page.html).
+The kernel is able to run [Rust](https://github.com/hermit-os/hermit-rs) applications, as well as [C/C++/Go/Fortran](https://github.com/hermit-os/hermit-playground) applications.
 
-There should be whitespace between paragraphs.
+# Background
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+**Hermit** is a rewrite of HermitCore in [Rust](https://www.rust-lang.org) developed at [RWTH-Aachen](https://www.rwth-aachen.de).
+HermitCore was a research unikernel written in C ([libhermit](https://github.com/hermit-os/libhermit)).
 
-# Header 1
+The ownership  model of Rust guarantees memory/thread-safety and enables us to eliminate many classes of bugs at compile-time.
+Consequently, the use of Rust for kernel development promises fewer vulnerabilities in comparison to common programming languages.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+The kernel and the integration into the Rust runtime are entirely written in Rust and do not use any C/C++ Code.
+We extended the Rust toolchain so that the build process is similar to Rust's usual workflow.
+Rust applications that use the Rust runtime and do not directly use OS services are able to run on Hermit without modifications.
+
 
 ## Header 2
 
