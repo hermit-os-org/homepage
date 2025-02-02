@@ -4,3 +4,5 @@ description: A Rust-based, lightweight unikernel
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+github:
+  repository_url: https://github.com/hermit-os
