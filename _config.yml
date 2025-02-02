@@ -8,4 +8,13 @@ github:
   repository_url: https://github.com/hermit-os
   owner_orl: https://github.com/hermit-os
   owner_name: RWTH Aachen University
-  repository_nwo: hermit-os/hermit-rs 
+  repository_nwo: hermit-os/hermit-rs
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - script
+  - vendor/bundle/
