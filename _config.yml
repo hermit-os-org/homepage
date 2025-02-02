@@ -6,4 +6,5 @@ google_analytics:
 theme: jekyll-theme-minimal
 github:
   repository_url: https://github.com/hermit-os
-  owner_orl: https://github.com/hermit-os 
+  owner_orl: https://github.com/hermit-os
+  repository_nwo: hermit-os/hermit-rs 
