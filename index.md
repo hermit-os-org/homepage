@@ -6,8 +6,6 @@ layout: default
 Unikernel means, you bundle your application directly with the kernel library, so that it can run without any installed operating system.
 This reduces overhead, therefore, interesting applications include virtual machines and high-performance computing.
 
-The kernel is able to run [Rust](https://github.com/hermit-os/hermit-rs) applications, as well as [C/C++/Go/Fortran](https://github.com/hermit-os/hermit-playground) applications.
-
 # Background
 
 **Hermit** is a rewrite of HermitCore in [Rust](https://www.rust-lang.org) developed at [RWTH-Aachen](https://www.rwth-aachen.de).
@@ -20,111 +18,46 @@ The kernel and the integration into the Rust runtime are entirely written in Rus
 We extended the Rust toolchain so that the build process is similar to Rust's usual workflow.
 Rust applications that use the Rust runtime and do not directly use OS services are able to run on Hermit without modifications.
 
+## Requirements
 
-## Header 2
+* [`rustup`](https://www.rust-lang.org/tools/install)
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+## Building your own applications
 
-### Header 3
+Have a look at [the template](https://github.com/hermit-os/hermit-rs-template).
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+## Use Hermit for C/C++, Go, and Fortran applications
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+If you are interested to build C/C++, Go, and Fortran applications on top of a Rust-based library operating system, please take a look at [https://github.com/hermit-os/hermit-playground](https://github.com/hermit-os/hermit-playground).
 
-#### Header 4
+## Wiki
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+Please use the [Wiki](https://github.com/hermit-os/hermit-rs/wiki) to get further information and configuration options.
 
-##### Header 5
+## Credits
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+Hermit is derived from following tutorials and software distributions:
 
-###### Header 6
+1. Philipp Oppermann's [excellent series of blog posts][opp].
+2. Erik Kidd's [toyos-rs][kidd], which is an extension of Philipp Opermann's kernel.
+3. The Rust-based teaching operating system [eduOS-rs][eduos].
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+[opp]: http://blog.phil-opp.com/
+[kidd]: http://www.randomhacks.net/bare-metal-rust/
+[eduos]: http://rwth-os.github.io/eduOS-rs/
 
-### There's a horizontal rule below this.
+## License
 
-* * *
+Licensed under either of
 
-### Here is an unordered list:
+* Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+* MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+at your option.
 
-### And an ordered list:
+## Contribution
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.
 
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+Hermit is being developed on [GitHub](https://github.com/hermit-os/hermit-rs).
+Create your own fork, send us a pull request, and chat with us on [Zulip](https://hermit.zulipchat.com/).
