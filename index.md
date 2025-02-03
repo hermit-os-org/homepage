@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[HermitOS](http://hermit-os.org) is a [unikernel](http://unikernel.org) targeting a scalable and predictable runtime for high-performance and cloud computing.
+[HermitOS](https://github.com/hermit-os/hermit-rs) is a [unikernel](http://unikernel.org) targeting a scalable and predictable runtime for high-performance and cloud computing.
 Unikernel means, you bundle your application directly with the kernel library, so that it can run without any installed operating system.
 This reduces overhead, therefore, interesting applications include virtual machines and high-performance computing.
 
